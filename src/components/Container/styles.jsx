@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: 56.25rem;
-  height: 37.5rem;
-
   padding: 0.625rem 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    font-size: 87.5%;
+    flex-direction: column-reverse;
+  }
 
   .infoPix {
     display: flex;
@@ -17,8 +19,8 @@ const Wrapper = styled.div`
     }
   }
   article {
-    width: 300px;
-    height: 270px;
+    width: 18.75rem;
+    height: 16.875rem;
     img {
       width: 100%;
       height: 100%;
