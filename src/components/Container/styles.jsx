@@ -33,10 +33,12 @@ const Wrapper = styled.div`
   article {
     width: 18.75rem;
     height: 16.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       width: 100%;
       height: 100%;
-      border: none;
     }
   }
 `;

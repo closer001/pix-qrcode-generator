@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
 import LogoPix from "../../assets/logoPix.svg";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function index() {
   const [ChavePix, setChavePix] = useState();
@@ -21,7 +22,7 @@ export default function index() {
     setValor(event.target.value);
   };
 
-  const [QrCode, setQrCode] = useState();
+  const [QrCode, setQrCode] = useState("");
 
   useEffect(() => {
     fetch(
@@ -65,7 +66,7 @@ export default function index() {
               />
             </Box>
             <article>
-              <img src={QrCode} alt="" />
+              {QrCode.length > 0 ? <img src={QrCode} /> : <CircularProgress />}
             </article>
           </div>
         </Wrapper>
