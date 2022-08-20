@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Wrapper from "./styles.jsx";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import Paper from "@mui/material/Paper";
+import LogoPix from "../../assets/logoPix.svg";
 
 export default function index() {
   const [ChavePix, setChavePix] = useState();
@@ -32,37 +34,42 @@ export default function index() {
 
   return (
     <>
-      <Wrapper>
-        <Box className="infoPix">
-          <TextField
-            className="inputInfo"
-            id="outlined-basic"
-            label="CHAVE PIX"
-            variant="outlined"
-            onChange={handlePixChange}
-            value={ChavePix}
-          />
-          <TextField
-            className="inputInfo"
-            id="outlined-basic"
-            label="DESCRIÇÃO"
-            variant="outlined"
-            onChange={handleDescricaoChange}
-            value={Descricao}
-          />
-          <TextField
-            className="inputInfo"
-            id="outlined-basic"
-            label="VALOR"
-            variant="outlined"
-            onChange={handleValorChange}
-            value={Valor}
-          />
-        </Box>
-        <article>
-          <img src={QrCode} alt="" />
-        </article>
-      </Wrapper>
+      <Paper elevation={3}>
+        <Wrapper>
+          <img className="logoImg" src={LogoPix}></img>
+          <div className="container">
+            <Box className="infoPix">
+              <TextField
+                className="inputInfo"
+                id="outlined-basic"
+                label="CHAVE PIX"
+                variant="outlined"
+                onChange={handlePixChange}
+                value={ChavePix}
+              />
+              <TextField
+                className="inputInfo"
+                id="outlined-basic"
+                label="DESCRIÇÃO"
+                variant="outlined"
+                onChange={handleDescricaoChange}
+                value={Descricao}
+              />
+              <TextField
+                className="inputInfo"
+                id="outlined-basic"
+                label="VALOR"
+                variant="outlined"
+                onChange={handleValorChange}
+                value={Valor}
+              />
+            </Box>
+            <article>
+              <img src={QrCode} alt="" />
+            </article>
+          </div>
+        </Wrapper>
+      </Paper>
     </>
   );
 }

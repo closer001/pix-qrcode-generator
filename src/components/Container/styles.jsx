@@ -5,10 +5,22 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   @media (max-width: 768px) {
     font-size: 87.5%;
     flex-direction: column-reverse;
+  }
+
+  .logoImg {
+    width: 500px;
+    height: 100px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .infoPix {
